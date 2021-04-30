@@ -26,6 +26,7 @@
 // #include <rev/ColorSensorV3.h>
 // #include <rev/ColorMatch.h>
 #include <frc/VictorSP.h>
+#include "Auto/ShooterPID.hpp"
 
 class Robot : public frc::TimedRobot
 {
@@ -94,7 +95,8 @@ class Robot : public frc::TimedRobot
   /*SubSystem Objects  */
   DriveTrain driveTrain{ m_leftTopMotor, m_rightTopMotor, m_leftMiddleMotor, m_rightMiddleMotor, m_leftBottomMotor, m_rightBottomMotor, Driver, LimeLight, ahrs};
 
-  Shooter shooter{m_leftShooter, m_rightShooter, shooterHood, Operator};
+  // Shooter shooter{m_leftShooter, m_rightShooter, shooterHood, Operator};
+  PIDShooter shooter;
   
   ClimbManager climber{test1, test2, Driver, climb};
 

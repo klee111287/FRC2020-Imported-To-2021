@@ -21,7 +21,7 @@ void Robot::RobotPeriodic(){
 }
 
 void Robot::AutonomousInit()     {
-    shooter.InitPID();
+    // shooter.InitPID();
     m_timer.Reset();
     m_timer.Start();
 
